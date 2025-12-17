@@ -8,7 +8,10 @@ router.get("/", (req, res) => {
   let response = "";
   if (query) {
     const filterPosts = arrayPosts.filter((post) => post.tags.includes(query));
-    response = filterPosts;
+    response = {
+      postsLength: filterPosts.length,
+      posts: filterPosts,
+    };
   } else {
     response = {
       postsLength: arrayPosts.length,
