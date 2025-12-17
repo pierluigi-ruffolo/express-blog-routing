@@ -1,5 +1,5 @@
 import express from "express";
-import arrayPosts from "../arrayPosts.js";
+import { arrayPosts } from "../arrayPosts.js";
 const router = express.Router();
 
 /* INDEX (tutti i post)*/

@@ -55,4 +55,14 @@ const arrayPosts = [
   },
 ];
 
-export default arrayPosts;
+const tags = [];
+
+arrayPosts.forEach((post) => {
+  post.tags.forEach((tag) => {
+    if (!tags.includes(tag)) {
+      tags.push(tag);
+    }
+  });
+});
+
+export { arrayPosts, tags };
