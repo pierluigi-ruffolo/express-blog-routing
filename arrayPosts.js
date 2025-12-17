@@ -19,6 +19,7 @@ const arrayPosts = [
       "Romanzo Grafico",
       "Psicologico",
       "Fantascientifico",
+      "Capolavoro",
     ],
   },
   {
@@ -43,7 +44,14 @@ const arrayPosts = [
     contenuto:
       "Il manga di Eiichiro Oda continua a battere record, seguendo la ciurma di Cappello di Paglia nella loro ricerca del tesoro One Piece. Un mix di azione, commedia ed emozione.",
     immagine: "/img/Watchmen.png",
-    tags: ["Manga", "Shonen", "Eiichiro Oda", "Avventura", "Pirates"],
+    tags: [
+      "Manga",
+      "Shonen",
+      "Eiichiro Oda",
+      "Avventura",
+      "Pirates",
+      "Capolavoro",
+    ],
   },
 ];
 

@@ -4,10 +4,18 @@ const router = express.Router();
 
 /* INDEX (tutti i post)*/
 router.get("/", (req, res) => {
-  const response = {
-    postsLength: arrayPosts.length,
-    posts: arrayPosts,
-  };
+  const query = req.query.tags;
+  let response = "";
+  if (query) {
+    const filterPosts = arrayPosts.filter((post) => post.tags.includes(query));
+    response = filterPosts;
+  } else {
+    response = {
+      postsLength: arrayPosts.length,
+      posts: arrayPosts,
+    };
+  }
+
   res.json(response);
 });
 
