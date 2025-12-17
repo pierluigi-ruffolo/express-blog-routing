@@ -1,4 +1,4 @@
-const comicPosts = [
+const arrayPosts = [
   {
     titolo: "Il Ritorno del Cavaliere Oscuro: Un Capolavoro Rivoluzionario",
     contenuto:
@@ -42,4 +42,4 @@ const comicPosts = [
   },
 ];
 
-export default comicPosts;
+export default arrayPosts;
