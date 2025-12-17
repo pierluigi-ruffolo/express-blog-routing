@@ -1,16 +1,21 @@
 import express from "express";
-
+import arrayPosts from "../arrayPosts.js";
 const router = express.Router();
 
 /* INDEX (tutti i post)*/
 router.get("/", (req, res) => {
-  res.send("tutti i post");
+  const response = {
+    postsLength: arrayPosts.length,
+    posts: arrayPosts,
+  };
+  res.json(response);
 });
 
 /* SHOW (singolo post)*/
 router.get("/:id", (req, res) => {
-  const id = req.params.id;
-  res.send("Restituirte Singolo post" + " " + id);
+  const id = parseInt(req.params.id);
+  const post = arrayPosts.find((post) => id === post.id);
+  res.json(post);
 });
 
 /* STORE (aggiungere un post)*/
